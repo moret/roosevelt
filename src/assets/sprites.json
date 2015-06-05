@@ -1,0 +1,105 @@
+{
+"frames": {
+	"attack-01.png": {
+		"frame": {"x":160, "y":0, "w":68, "h":124},
+		"spriteSourceSize": {"x":0,"y":0,"w":68,"h":124},
+		"sourceSize": {"w":68,"h":124}
+	},
+	"attack-02.png": {
+		"frame": {"x":114, "y":238, "w":76, "h":122},
+		"spriteSourceSize": {"x":0,"y":0,"w":76,"h":122},
+		"sourceSize": {"w":76,"h":122}
+	},
+	"attack-03.png": {
+		"frame": {"x":0, "y":119, "w":159, "h":118},
+		"spriteSourceSize": {"x":0,"y":0,"w":159,"h":118},
+		"sourceSize": {"w":159,"h":118}
+	},
+	"attack-04.png": {
+		"frame": {"x":0, "y":238, "w":113, "h":118},
+		"spriteSourceSize": {"x":0,"y":0,"w":113,"h":118},
+		"sourceSize": {"w":113,"h":118}
+	},
+	"attack-05.png": {
+		"frame": {"x":0, "y":0, "w":159, "h":118},
+		"spriteSourceSize": {"x":0,"y":0,"w":159,"h":118},
+		"sourceSize": {"w":159,"h":118}
+	},
+	"attack-06.png": {
+		"frame": {"x":0, "y":238, "w":113, "h":118},
+		"spriteSourceSize": {"x":0,"y":0,"w":113,"h":118},
+		"sourceSize": {"w":113,"h":118}
+	},
+	"climb-01.png": {
+		"frame": {"x":191, "y":249, "w":67, "h":123},
+		"spriteSourceSize": {"x":0,"y":0,"w":67,"h":123},
+		"sourceSize": {"w":67,"h":123}
+	},
+	"climb-02.png": {
+		"frame": {"x":191, "y":249, "w":67, "h":123},
+		"spriteSourceSize": {"x":0,"y":0,"w":67,"h":123},
+		"sourceSize": {"w":67,"h":123}
+	},
+	"climb-03.png": {
+		"frame": {"x":324, "y":125, "w":61, "h":109},
+		"spriteSourceSize": {"x":0,"y":0,"w":61,"h":123},
+		"sourceSize": {"w":61,"h":123}
+	},
+	"climb-04.png": {
+		"frame": {"x":229, "y":0, "w":67, "h":123},
+		"spriteSourceSize": {"x":0,"y":0,"w":67,"h":123},
+		"sourceSize": {"w":67,"h":123}
+	},
+	"climb-05.png": {
+		"frame": {"x":324, "y":125, "w":61, "h":109},
+		"spriteSourceSize": {"x":0,"y":0,"w":61,"h":123},
+		"sourceSize": {"w":61,"h":123}
+	},
+	"fall.png": {
+		"frame": {"x":191, "y":125, "w":67, "h":123},
+		"spriteSourceSize": {"x":0,"y":0,"w":67,"h":123},
+		"sourceSize": {"w":67,"h":123}
+	},
+	"idle-01.png": {
+		"frame": {"x":323, "y":248, "w":63, "h":124},
+		"spriteSourceSize": {"x":0,"y":0,"w":63,"h":124},
+		"sourceSize": {"w":63,"h":124}
+	},
+	"idle-02.png": {
+		"frame": {"x":297, "y":0, "w":63, "h":124},
+		"spriteSourceSize": {"x":0,"y":0,"w":63,"h":124},
+		"sourceSize": {"w":63,"h":124}
+	},
+	"jump.png": {
+		"frame": {"x":259, "y":124, "w":64, "h":123},
+		"spriteSourceSize": {"x":0,"y":0,"w":64,"h":123},
+		"sourceSize": {"w":64,"h":123}
+	},
+	"walk-01.png": {
+		"frame": {"x":259, "y":248, "w":63, "h":124},
+		"spriteSourceSize": {"x":0,"y":0,"w":63,"h":124},
+		"sourceSize": {"w":63,"h":124}
+	},
+	"walk-02.png": {
+		"frame": {"x":361, "y":0, "w":63, "h":124},
+		"spriteSourceSize": {"x":0,"y":0,"w":63,"h":124},
+		"sourceSize": {"w":63,"h":124}
+	},
+	"walk-03.png": {
+		"frame": {"x":387, "y":125, "w":63, "h":124},
+		"spriteSourceSize": {"x":0,"y":0,"w":63,"h":124},
+		"sourceSize": {"w":63,"h":124}
+	},
+	"walk-04.png": {
+		"frame": {"x":387, "y":250, "w":63, "h":124},
+		"spriteSourceSize": {"x":0,"y":0,"w":63,"h":124},
+		"sourceSize": {"w":63,"h":124}
+	}
+
+},
+"meta": {
+	"image": "sprites.png",
+	"size": {"w": 451, "h": 375},
+	"scale": "1"
+}
+}
