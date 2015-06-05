@@ -1,6 +1,8 @@
 'use strict';
 
-var game = new Phaser.Game(800, 600, Phaser.AUTO, 'roosevelt-game');
+var height = 648;
+var width = height*16/9;
+var game = new Phaser.Game(width, height, Phaser.AUTO, 'roosevelt-game');
 
 window.Utils = require('./utils');
 window.playerState = {currentLevel: 'Game'};

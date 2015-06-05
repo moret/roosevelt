@@ -33,6 +33,8 @@ Player.prototype.constructor = Player;
  * Automatically called by World.update
  */
 Player.prototype.update = function() {
+  this.isMovingRight = false;
+
   if (this.willAttack) {
     this.animations.play('attack');
     this.isAttacking = true;
@@ -40,6 +42,7 @@ Player.prototype.update = function() {
 
   if (!this.isAttacking) {
     if (this.rightKey.isDown || this.leftKey.isDown) {
+      this.isMovingRight = true;
       this.animations.play('walk');
     } else {
       this.animations.play('idle');
