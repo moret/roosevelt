@@ -15,13 +15,14 @@ Game.prototype = {
     var xKey = this.input.keyboard.addKey(Phaser.Keyboard.X);
     xKey.onDown.add(this.testentity.onAttackInput, this.testentity);
 
-    this.input.onDown.add(this.onInputDown, this);
+    var escKey = this.input.keyboard.addKey(Phaser.Keyboard.ESC);
+    escKey.onDown.add(this.onEscInput, this);
   },
 
   update: function () {
   },
 
-  onInputDown: function () {
+  onEscInput: function () {
     this.game.state.start('Menu');
   }
 };
