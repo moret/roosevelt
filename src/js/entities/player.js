@@ -9,10 +9,20 @@ var Player = function (game, x, y) {
     'attack-05.png',
     'attack-04.png',
     'attack-01.png'
-  ], 10, false, false);
+  ], 12, false, false);
   this.attackAnimation.onComplete.add(this.attackFinished, this);
 
-  this.animations.add('idle', ['idle-01.png', 'idle-02.png'], 2, true, false);
+  this.walkingAnimation = this.animations.add('walk', [
+    'walk-01.png',
+    'walk-02.png',
+    'walk-03.png',
+    'walk-04.png'
+  ], 8, true, false);
+
+  this.animations.add('idle', [
+    'idle-01.png',
+    'idle-02.png'
+  ], 1, true, false);
   this.animations.play('idle');
 }
 
@@ -25,6 +35,15 @@ Player.prototype.constructor = Player;
 Player.prototype.update = function() {
   if (this.willAttack) {
     this.animations.play('attack');
+    this.isAttacking = true;
+  }
+
+  if (!this.isAttacking) {
+    if (this.rightKey.isDown || this.leftKey.isDown) {
+      this.animations.play('walk');
+    } else {
+      this.animations.play('idle');
+    }
   }
 
   this.willAttack = false;
@@ -32,6 +51,7 @@ Player.prototype.update = function() {
 
 Player.prototype.attackFinished = function() {
   this.animations.play('idle');
+  this.isAttacking = false;
 };
 
 Player.prototype.onAttackInput = function () {
