@@ -15,8 +15,8 @@ Preloader.prototype = {
     this.load.image('city-background', 'assets/city-background.png');
     this.load.image('city-foreground', 'assets/city-foreground.png');
 
-    this.load.json('sprites_atlas', 'assets/sprites.json');
-    this.load.atlasJSONHash('chibi', 'assets/sprites.png', 'assets/sprites.json');
+    this.load.json('ninja_atlas', 'assets/ninja.json');
+    xxx = this.load.atlasJSONHash('ninja', 'assets/ninja.png', 'assets/ninja.json');
   },
 
   create: function () {

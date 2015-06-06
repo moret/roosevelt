@@ -1,50 +1,46 @@
 var Player = function (game, x, y) {
-  Phaser.Sprite.call(this, game, x, y, 'chibi', 'idle-01.png');
+  Phaser.Sprite.call(this, game, x, y, 'ninja', 'Idle__001.png');
   game.add.existing(this);
+  this.anchor.setTo(0.5, 0.55);
 
-  this.attackAnimation = this.animations.add('attack', [
-    'attack-01.png',
-    'attack-02.png',
-    'attack-03.png',
-    'attack-05.png',
-    'attack-04.png',
-    'attack-01.png'
-  ], 12, false, false);
+  this.attackAnimation = this.animations.add(
+    'attack', Phaser.Animation.generateFrameNames('Attack__', 1, 10, '.png', 3),
+    24, false, false
+  );
   this.attackAnimation.onComplete.add(this.attackFinished, this);
 
-  this.walkingAnimation = this.animations.add('walk', [
-    'walk-01.png',
-    'walk-02.png',
-    'walk-03.png',
-    'walk-04.png'
-  ], 8, true, false);
+  this.animations.add(
+    'run', Phaser.Animation.generateFrameNames('Run__', 1, 10, '.png', 3),
+    24, true, false
+  );
 
-  this.animations.add('idle', [
-    'idle-01.png',
-    'idle-02.png'
-  ], 1, true, false);
+  this.animations.add(
+    'idle', Phaser.Animation.generateFrameNames('Idle__', 1, 9, '.png', 3),
+    6, true, false
+  );
+
   this.animations.play('idle');
 }
 
 Player.prototype = Object.create(Phaser.Sprite.prototype);
 Player.prototype.constructor = Player;
 
-/**
- * Automatically called by World.update
- */
 Player.prototype.update = function() {
   this.isMovingRight = false;
 
   if (this.willAttack) {
     this.animations.play('attack');
     this.isAttacking = true;
+    this.anchor.setTo(0.3, 0.5);
   }
 
   if (!this.isAttacking) {
     if (this.rightKey.isDown || this.leftKey.isDown) {
       this.isMovingRight = true;
-      this.animations.play('walk');
+      this.anchor.setTo(0.5, 0.5);
+      this.animations.play('run');
     } else {
+      this.anchor.setTo(0.5, 0.55);
       this.animations.play('idle');
     }
   }

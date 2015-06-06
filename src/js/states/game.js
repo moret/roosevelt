@@ -16,7 +16,6 @@ Game.prototype = {
     this.cityForeground = this.add.tileSprite(0, 0, this.world.width, this.world.height, 'city-foreground');
 
     this.testentity = new Player(this.game, x, y);
-    this.testentity.anchor.setTo(0.5, 0.5);
 
     var xKey = this.input.keyboard.addKey(Phaser.Keyboard.X);
     xKey.onDown.add(this.testentity.onAttackInput, this.testentity);
